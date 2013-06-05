@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <title>MVC Summit 2013 | @ViewBag.Title</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS Global Compulsory-->
+    <link rel="stylesheet" href="~/content/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/content/css/style.css">
+    <link rel="stylesheet" href="~/content/css/headers/header1.css">
+    <link rel="stylesheet" href="~/content/plugins/bootstrap/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="~/content/css/style_responsive.css">
+    <link rel="shortcut icon" href="~/favicon.ico">
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="~/content/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="~/content/plugins/flexslider/flexslider.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="~/content/plugins/parallax-slider/css/parallax-slider.css" type="text/css">
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="~/content/css/themes/default.css" id="style_color">
+    @*<link rel="stylesheet" href="~/content/css/themes/headers/default.css" id="style_color-header-1">*@
+</head>
+
+<body>
+    <br />
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="@Url.Action("Index", "Home")"><img id="logo-header" src="~/content/img/logo1-default.png" alt="Logo"></a>
+            </div>
+
+            @Html.Partial("_TopMenu")
+        </div>
+    </div>
+    <div class="container">
+        @RenderBody()
+
+        <div id="clients-flexslider" class="flexslider home clients">
+            <div class="headline">
+                <h3>Patrocinadores</h3>
+            </div>
+            <ul class="slides">
+                <li>
+                    <a href="http://www.sismat.com.br/" target="_blank">
+                        <img src="~/content/img/clients/sismat_grey.png" alt="" />
+                        <img src="~/content/img/clients/sismat.png" class="color-img" alt="" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span4">
+                    <div class="headline">
+                        <h3>MVC Summit 2013</h3>
+                    </div>
+                    <p class="margin-bottom-25">Esta é a terceira edição do evento MVC Summit, que ocorre online anualmente.</p>
+                </div>
+
+                <div class="span4">
+                    <div class="headline">
+                        <h3>Fique conectado</h3>
+                    </div>
+                    <ul class="social-icons">
+                        <li><a href="http://www.facebook.com/MvcSummit" target="_blank" data-original-title="Facebook" class="social_facebook"></a></li>
+                        <li><a href="https://twitter.com/search?q=mvcsummit&src=typd" target="_blank" data-original-title="Twitter" class="social_twitter"></a></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <div class="headline">
+                        <h3>Contato</h3>
+                    </div>
+                    <address>
+                        André Baltieri<br />
+                        Twitter: <a href="http://www.twitter.com/andrebaltieri">@@andrebaltieri</a><br />
+                        Email: <a href="mailto:andre.baltieri@sismat.com.br" class="">andre.baltieri@sismat.com.br</a>
+                    </address>
+
+                    <address>
+                        Victor Cavalcante<br />
+                        Twitter: <a href="http://www.twitter.com/vcavalcante">@@vcavalcante</a><br />
+                        Email: <a href="mailto:contato@vcavalcante.net" class="">contato@vcavalcante.net</a>
+                    </address>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span8">
+                    <p>2013 &copy; Desenvolvido por <a href="http://www.sismat.com.br/" target="_blank">Sismat Consultoria & TI</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Global Compulsory -->
+    <script type="text/javascript" src="~/content/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="~/content/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="~/content/plugins/bootstrap/js/bootstrap.min.js"></script>    
+
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="~/content/plugins/flexslider/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="~/content/plugins/parallax-slider/js/modernizr.js"></script>
+    <script type="text/javascript" src="~/content/plugins/parallax-slider/js/jquery.cslider.js"></script>
+    <script type="text/javascript" src="~/content/plugins/back-to-top.js"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="~/content/js/app.js"></script>
+    <script type="text/javascript" src="~/content/js/pages/index.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init();
+            App.initSliders();
+            Index.initParallaxSlider();
+        });
+    </script>
+
+    @RenderSection("scripts", false)
+
+    <!--[if lt IE 9]>
+        <script src="~/content/js/respond.js"></script>
+    <![endif]-->
+
+</body>
+</html>
